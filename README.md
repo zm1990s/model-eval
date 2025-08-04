@@ -4,7 +4,7 @@ A comprehensive evaluation tool for prompt injection detection models. This scri
 
 ## Features
 
-- Supports multiple model types (Llama Prompt Guard, ProtectAI DeBERTa, etc.)
+- Supports multiple model types (Llama Prompt Guard, ProtectAI DeBERTa, PreambleAI, Qualifire, SavantAI, etc.)
 - Processes Parquet format datasets automatically
 - Generates comprehensive evaluation metrics
 - Creates organized output directories with model names and timestamps
@@ -54,6 +54,15 @@ model_path = "./models/Llama-Prompt-Guard-2-86M/"
 
 # For ProtectAI DeBERTa
 model_path = "./models/protectai/"
+
+# For PreambleAI
+model_path = "./models/preambleai/"
+
+# For Qualifire
+model_path = "./models/qualifire/"
+
+# For SavantAI
+model_path = "./models/testsavantai-prompt-injection-defender-large-v0/"
 ```
 
 ### Dataset Configuration
@@ -71,6 +80,9 @@ python model-eval-v1.py
 ### Supported Models
 - **Llama Prompt Guard 2 (86M)**: Meta's prompt injection detection model
 - **ProtectAI DeBERTa v3**: ProtectAI's DeBERTa-based prompt injection detector
+- **PreambleAI**: PreambleAI's prompt injection detection model
+- **Qualifire**: Qualifire's prompt injection detection model
+- **SavantAI**: SavantAI's large prompt injection defender model
 
 ## Dataset Format
 
@@ -102,6 +114,30 @@ The script creates a timestamped directory with the model name: `evaluation_resu
 4. **`evaluation_metrics_{timestamp}.json`**
    - Structured evaluation metrics in JSON format
    - Includes formulas and metadata
+
+## Model Evaluation Results Comparison
+
+Based on evaluation results from August 4, 2025, here's the performance comparison of various models on the same test dataset:
+
+| Model Name | Accuracy | Recall | Precision | F1 Score | FPR |
+|------------|----------|--------|-----------|----------|-----|
+| **SavantAI Defender Large** | **99.40%** | **98.48%** | **100.00%** | **99.23%** | **0.00%** |
+| **Qualifire** | **96.83%** | **92.78%** | **99.19%** | **95.87%** | **0.50%** |
+| **ProtectAI v1** | 77.49% | 45.25% | 95.97% | 61.50% | 1.25% |
+| **ProtectAI v2** | 76.13% | 41.44% | 96.46% | 57.98% | 1.00% |
+| **PreambleAI** | 74.62% | 47.91% | 80.25% | 60.00% | 7.77% |
+| **Llama Prompt Guard 2** | 69.18% | 22.81% | 98.36% | 37.04% | 0.25% |
+
+### Detailed Confusion Matrix Comparison
+
+| Model Name | TP | TN | FP | FN | Total Samples |
+|------------|----|----|----|----|---------------|
+| SavantAI Defender Large | 259 | 399 | 0 | 4 | 662 |
+| Qualifire | 244 | 397 | 2 | 19 | 662 |
+| ProtectAI v1 | 119 | 394 | 5 | 144 | 662 |
+| ProtectAI | 109 | 395 | 4 | 154 | 662 |
+| PreambleAI | 126 | 368 | 31 | 137 | 662 |
+| Llama Prompt Guard 2 | 60 | 398 | 1 | 203 | 662 |
 
 ### Evaluation Metrics
 

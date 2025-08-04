@@ -1,0 +1,25 @@
+{
+  "evaluation_time": "2025-08-04T17:55:38.028887",
+  "data_source": "evaluation_results_qualifire_20250804_175409/eval_summary_20250804_175537.csv",
+  "total_valid_samples": 662,
+  "confusion_matrix": {
+    "true_positive": 244,
+    "true_negative": 397,
+    "false_positive": 2,
+    "false_negative": 19
+  },
+  "metrics": {
+    "accuracy": 0.9682779456193353,
+    "recall": 0.9277566539923955,
+    "precision": 0.991869918699187,
+    "false_positive_rate": 0.005012531328320802,
+    "f1_score": 0.9587426326129665
+  },
+  "formulas": {
+    "accuracy": "(TP + TN) / (TP + TN + FP + FN)",
+    "recall": "TP / (TP + FN)",
+    "precision": "TP / (TP + FP)",
+    "false_positive_rate": "FP / (FP + TN)",
+    "f1_score": "2 × (Precision × Recall) / (Precision + Recall)"
+  }
+}

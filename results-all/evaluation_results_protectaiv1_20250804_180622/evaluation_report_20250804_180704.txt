@@ -1,0 +1,28 @@
+模型评估报告
+==================================================
+评估时间: 2025-08-04T18:07:04.877532
+数据来源: evaluation_results_protectaiv1_20250804_180622/eval_summary_20250804_180704.csv
+有效样本数: 662
+
+混淆矩阵:
+--------------------
+True Positive (TP):  119
+True Negative (TN):  394
+False Positive (FP): 5
+False Negative (FN): 144
+
+评估指标:
+--------------------
+准确度 (Accuracy):    0.7749
+召回率 (Recall):      0.4525
+精确度 (Precision):   0.9597
+误报率 (FPR):         0.0125
+F1分数 (F1):          0.6150
+
+指标说明:
+--------------------
+准确度 (Accuracy) = (TP + TN) / (TP + TN + FP + FN)
+召回率 (Recall) = TP / (TP + FN)
+精确度 (Precision) = TP / (TP + FP)
+误报率 (FPR) = FP / (FP + TN)
+F1分数 (F1) = 2 × (Precision × Recall) / (Precision + Recall)

@@ -4,7 +4,7 @@
 
 ## 功能特性
 
-- 支持多种模型类型（Llama Prompt Guard、ProtectAI DeBERTa 等）
+- 支持多种模型类型（Llama Prompt Guard、ProtectAI DeBERTa、PreambleAI、Qualifire、SavantAI 等）
 - 自动处理 Parquet 格式数据集
 - 生成全面的评估指标
 - 创建包含模型名称和时间戳的有序输出目录
@@ -54,6 +54,15 @@ model_path = "./models/Llama-Prompt-Guard-2-86M/"
 
 # ProtectAI DeBERTa 模型
 model_path = "./models/protectai/"
+
+# PreambleAI 模型
+model_path = "./models/preambleai/"
+
+# Qualifire 模型
+model_path = "./models/qualifire/"
+
+# SavantAI 模型
+model_path = "./models/testsavantai-prompt-injection-defender-large-v0/"
 ```
 
 ### 数据集配置
@@ -71,6 +80,9 @@ python model-eval-v1.py
 ### 支持的模型
 - **Llama Prompt Guard 2 (86M)**: Meta 的提示注入检测模型
 - **ProtectAI DeBERTa v3**: ProtectAI 基于 DeBERTa 的提示注入检测器
+- **PreambleAI**: PreambleAI 的提示注入检测模型
+- **Qualifire**: Qualifire 的提示注入检测模型
+- **SavantAI**: SavantAI 的大型提示注入防护模型
 
 ## 数据集格式
 
@@ -102,6 +114,30 @@ python model-eval-v1.py
 4. **`evaluation_metrics_{时间戳}.json`**
    - JSON 格式的结构化评估指标
    - 包含公式和元数据
+
+## 模型评估结果对比
+
+基于 2025年8月4日 的评估结果，以下是各模型在同一测试数据集上的性能对比：
+
+| 模型名称 | 准确度 (Accuracy) | 召回率 (Recall) | 精确度 (Precision) | F1分数 | 误报率 (FPR) |
+|---------|------------------|----------------|-------------------|--------|--------------|
+| **SavantAI Defender Large** | **99.40%** | **98.48%** | **100.00%** | **99.23%** | **0.00%** |
+| **Qualifire** | **96.83%** | **92.78%** | **99.19%** | **95.87%** | **0.50%** |
+| **ProtectAI v1** | 77.49% | 45.25% | 95.97% | 61.50% | 1.25% |
+| **ProtectAI** | 76.13% | 41.44% | 96.46% | 57.98% | 1.00% |
+| **PreambleAI** | 74.62% | 47.91% | 80.25% | 60.00% | 7.77% |
+| **Llama Prompt Guard 2** | 69.18% | 22.81% | 98.36% | 37.04% | 0.25% |
+
+### 详细混淆矩阵对比
+
+| 模型名称 | TP | TN | FP | FN | 样本总数 |
+|---------|----|----|----|----|----------|
+| SavantAI Defender Large | 259 | 399 | 0 | 4 | 662 |
+| Qualifire | 244 | 397 | 2 | 19 | 662 |
+| ProtectAI v1 | 119 | 394 | 5 | 144 | 662 |
+| ProtectAI | 109 | 395 | 4 | 154 | 662 |
+| PreambleAI | 126 | 368 | 31 | 137 | 662 |
+| Llama Prompt Guard 2 | 60 | 398 | 1 | 203 | 662 |
 
 ### 评估指标
 
@@ -150,6 +186,10 @@ evaluation_results_Llama-Prompt-Guard-2-86M_20250804_143022/
 
 - [Llama Prompt Guard 86M](https://huggingface.co/meta-llama/Prompt-Guard-86M)
 - [ProtectAI DeBERTa v3](https://huggingface.co/protectai/deberta-v3-base-prompt-injection-v2)
+- [PreambleAI](https://huggingface.co/preambleai/preamble-prompt-injection-model)
+- [Qualifire](https://huggingface.co/qualifire/prompt-injection-detector)
+- [SavantAI Defender](https://huggingface.co/testsavantai/prompt-injection-defender-large-v0)
+
 
 ## 许可证
 

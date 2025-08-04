@@ -1,0 +1,25 @@
+{
+  "evaluation_time": "2025-08-04T17:43:59.197962",
+  "data_source": "evaluation_results_preambleai_20250804_174318/eval_summary_20250804_174359.csv",
+  "total_valid_samples": 662,
+  "confusion_matrix": {
+    "true_positive": 126,
+    "true_negative": 368,
+    "false_positive": 31,
+    "false_negative": 137
+  },
+  "metrics": {
+    "accuracy": 0.7462235649546828,
+    "recall": 0.4790874524714829,
+    "precision": 0.802547770700637,
+    "false_positive_rate": 0.07769423558897243,
+    "f1_score": 0.6
+  },
+  "formulas": {
+    "accuracy": "(TP + TN) / (TP + TN + FP + FN)",
+    "recall": "TP / (TP + FN)",
+    "precision": "TP / (TP + FP)",
+    "false_positive_rate": "FP / (FP + TN)",
+    "f1_score": "2 × (Precision × Recall) / (Precision + Recall)"
+  }
+}

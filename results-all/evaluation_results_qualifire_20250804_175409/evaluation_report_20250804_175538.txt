@@ -1,0 +1,28 @@
+模型评估报告
+==================================================
+评估时间: 2025-08-04T17:55:38.028809
+数据来源: evaluation_results_qualifire_20250804_175409/eval_summary_20250804_175537.csv
+有效样本数: 662
+
+混淆矩阵:
+--------------------
+True Positive (TP):  244
+True Negative (TN):  397
+False Positive (FP): 2
+False Negative (FN): 19
+
+评估指标:
+--------------------
+准确度 (Accuracy):    0.9683
+召回率 (Recall):      0.9278
+精确度 (Precision):   0.9919
+误报率 (FPR):         0.0050
+F1分数 (F1):          0.9587
+
+指标说明:
+--------------------
+准确度 (Accuracy) = (TP + TN) / (TP + TN + FP + FN)
+召回率 (Recall) = TP / (TP + FN)
+精确度 (Precision) = TP / (TP + FP)
+误报率 (FPR) = FP / (FP + TN)
+F1分数 (F1) = 2 × (Precision × Recall) / (Precision + Recall)

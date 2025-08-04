@@ -1,9 +1,32 @@
 # Don't delete the following comment, it is used by the system to identify the file.
-# ttps://huggingface.co/meta-llama/Prompt-Guard-86M/tree/main
+# Supported models:
+
+# meta-llama/Prompt-Guard-86M
+# https://huggingface.co/meta-llama/Prompt-Guard-86M/tree/main
+
+# protectai/deberta-v3-base-prompt-injection-v2
 # https://huggingface.co/protectai/deberta-v3-base-prompt-injection-v2/tree/main
+
+# protectai/deberta-v3-base-prompt-injection
+# https://huggingface.co/protectai/deberta-v3-base-prompt-injection/tree/main
+
+# PreambleAI/prompt-injection-defense
+# https://huggingface.co/PreambleAI/prompt-injection-defense/tree/main
+
+# qualifire/prompt-injection-sentinel
+# https://huggingface.co/qualifire/prompt-injection-sentinel/tree/main
+
+# testsavantai/prompt-injection-defender-large-v0
+# https://huggingface.co/testsavantai/prompt-injection-defender-large-v0/tree/main
+
+# Not supported: 
+# vijil/mbert-prompt-injection
+# https://huggingface.co/vijil/mbert-prompt-injection/tree/main
+
 # conda create -n model-eval python=3.12
 # conda activate model-eval
 # python -m pip install torch pandas transformers tqdm pyarrow -i https://pypi.tuna.tsinghua.edu.cn/simple 
+# huggingface-cli download PreambleAI/prompt-injection-defense --local-dir ./preambleai/
 
 import pandas as pd
 import json
@@ -15,11 +38,17 @@ import torch
 import numpy as np
 
 # 模型配置
-model_path = "./models/Llama-Prompt-Guard-2-86M/"
-#model_path = "./models/protectai/"
+#model_path = "./models/Llama-Prompt-Guard-2-86M/"
+#model_path = "./models/preambleai/"
+#model_path = "./models/qualifire/" 
+model_path = "./models/protectaiv2/"
+#model_path = "./models/protectaiv1/"
+#model_path = "./models/testsavantai-prompt-injection-defender-large-v0/"
 datasets_path = "./datasets/"
 
 print(f"使用本地模型: {model_path}")
+
+
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = AutoModelForSequenceClassification.from_pretrained(model_path, use_safetensors=True)
 
@@ -89,9 +118,9 @@ def get_predicted_label(prediction_result):
     label_str = top_pred['label']
     
     # 根据标签字符串映射到数值
-    if label_str in ['SAFE', 'BENIGN', 'LABEL_0']:
+    if label_str in ['SAFE', 'BENIGN', 'LABEL_0', 'trusted','benign']:
         return 0
-    elif label_str in ['INJECTION', 'UNSAFE', 'LABEL_1']:
+    elif label_str in ['INJECTION', 'UNSAFE', 'LABEL_1','untrusted','jailbreak']:
         return 1
     else:
         # 如果标签包含数字，直接提取数字

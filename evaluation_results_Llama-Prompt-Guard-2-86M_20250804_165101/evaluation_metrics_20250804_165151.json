@@ -1,0 +1,25 @@
+{
+  "evaluation_time": "2025-08-04T16:51:51.996136",
+  "data_source": "evaluation_results_Llama-Prompt-Guard-2-86M_20250804_165101/eval_summary_20250804_165151.csv",
+  "total_valid_samples": 662,
+  "confusion_matrix": {
+    "true_positive": 60,
+    "true_negative": 398,
+    "false_positive": 1,
+    "false_negative": 203
+  },
+  "metrics": {
+    "accuracy": 0.6918429003021148,
+    "recall": 0.22813688212927757,
+    "precision": 0.9836065573770492,
+    "false_positive_rate": 0.002506265664160401,
+    "f1_score": 0.3703703703703704
+  },
+  "formulas": {
+    "accuracy": "(TP + TN) / (TP + TN + FP + FN)",
+    "recall": "TP / (TP + FN)",
+    "precision": "TP / (TP + FP)",
+    "false_positive_rate": "FP / (FP + TN)",
+    "f1_score": "2 × (Precision × Recall) / (Precision + Recall)"
+  }
+}

@@ -16,8 +16,8 @@ A comprehensive evaluation tool for prompt injection detection models. This scri
 
 ### Environment Setup
 ```bash
-conda create -n prompt-guard python=3.12
-conda activate prompt-guard
+conda create -n model-eval python=3.12
+conda activate model-eval
 python -m pip install torch pandas transformers tqdm pyarrow
 ```
 
@@ -32,8 +32,8 @@ python -m pip install torch pandas transformers tqdm pyarrow
 ## Project Structure
 
 ```
-prompt-injection-eval/
-├── model-eval-v3.py          # Main evaluation script
+model-eval/
+├── model-eval-v1.py          # Main evaluation script
 ├── models/                   # Model directory
 │   ├── Llama-Prompt-Guard-2-86M/
 │   └── protectai/
@@ -46,7 +46,7 @@ prompt-injection-eval/
 ## Configuration
 
 ### Model Configuration
-Edit the model path in `model-eval-v3.py`:
+Edit the model path in `model-eval-v1.py`:
 
 ```python
 # For Llama Prompt Guard
@@ -65,7 +65,7 @@ datasets_path = "./datasets/"
 
 ### Basic Usage
 ```bash
-python model-eval-v3.py
+python model-eval-v1.py
 ```
 
 ### Supported Models
@@ -126,24 +126,6 @@ evaluation_results_Llama-Prompt-Guard-2-86M_20250804_143022/
 ├── evaluation_report_20250804_143022.txt
 └── evaluation_metrics_20250804_143022.json
 ```
-
-## Advanced Features
-
-### Automatic Column Detection
-The script intelligently identifies:
-- Text columns containing prompts to analyze
-- Label columns for ground truth comparison
-- Additional metadata columns for context
-
-### Error Handling
-- Graceful handling of malformed inputs
-- Detailed error logging
-- Partial results preservation
-
-### Flexible Input Format
-- Supports various dataset structures
-- Automatic text preprocessing
-- Configurable text truncation (512 tokens max)
 
 ## Troubleshooting
 

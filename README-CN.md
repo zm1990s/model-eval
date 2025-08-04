@@ -16,8 +16,8 @@
 
 ### 环境设置
 ```bash
-conda create -n prompt-guard python=3.12
-conda activate prompt-guard
+conda create -n model-eval python=3.12
+conda activate model-eval
 python -m pip install torch pandas transformers tqdm pyarrow
 ```
 
@@ -32,8 +32,8 @@ python -m pip install torch pandas transformers tqdm pyarrow
 ## 项目结构
 
 ```
-prompt-injection-eval/
-├── model-eval-v3.py          # 主评估脚本
+model-eval/
+├── model-eval-v1.py          # 主评估脚本
 ├── models/                   # 模型目录
 │   ├── Llama-Prompt-Guard-2-86M/
 │   └── protectai/
@@ -46,7 +46,7 @@ prompt-injection-eval/
 ## 配置
 
 ### 模型配置
-在 `model-eval-v3.py` 中编辑模型路径：
+在 `model-eval-v1.py` 中编辑模型路径：
 
 ```python
 # Llama Prompt Guard 模型
@@ -65,7 +65,7 @@ datasets_path = "./datasets/"
 
 ### 基本用法
 ```bash
-python model-eval-v3.py
+python model-eval-v1.py
 ```
 
 ### 支持的模型
@@ -126,24 +126,6 @@ evaluation_results_Llama-Prompt-Guard-2-86M_20250804_143022/
 ├── evaluation_report_20250804_143022.txt
 └── evaluation_metrics_20250804_143022.json
 ```
-
-## 高级功能
-
-### 自动列检测
-脚本智能识别：
-- 包含待分析提示的文本列
-- 用于真值比较的标签列
-- 用于上下文的附加元数据列
-
-### 错误处理
-- 优雅处理格式错误的输入
-- 详细的错误日志记录
-- 部分结果保存
-
-### 灵活的输入格式
-- 支持各种数据集结构
-- 自动文本预处理
-- 可配置的文本截断（最大 512 tokens）
 
 ## 故障排除
 

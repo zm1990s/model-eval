@@ -135,7 +135,7 @@ Based on evaluation results from August 4, 2025, here's the performance comparis
 | SavantAI Defender Large | 259 | 399 | 0 | 4 | 662 |
 | Qualifire | 244 | 397 | 2 | 19 | 662 |
 | ProtectAI v1 | 119 | 394 | 5 | 144 | 662 |
-| ProtectAI | 109 | 395 | 4 | 154 | 662 |
+| ProtectAI v2 | 109 | 395 | 4 | 154 | 662 |
 | PreambleAI | 126 | 368 | 31 | 137 | 662 |
 | Llama Prompt Guard 2 | 60 | 398 | 1 | 203 | 662 |
 

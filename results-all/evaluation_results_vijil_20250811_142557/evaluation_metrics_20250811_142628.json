@@ -1,0 +1,25 @@
+{
+  "evaluation_time": "2025-08-11T14:26:28.990458",
+  "data_source": "evaluation_results_vijil_20250811_142557/eval_summary_20250811_142628.csv",
+  "total_valid_samples": 662,
+  "confusion_matrix": {
+    "true_positive": 78,
+    "true_negative": 382,
+    "false_positive": 17,
+    "false_negative": 185
+  },
+  "metrics": {
+    "accuracy": 0.6948640483383686,
+    "recall": 0.2965779467680608,
+    "precision": 0.8210526315789474,
+    "false_positive_rate": 0.042606516290726815,
+    "f1_score": 0.43575418994413406
+  },
+  "formulas": {
+    "accuracy": "(TP + TN) / (TP + TN + FP + FN)",
+    "recall": "TP / (TP + FN)",
+    "precision": "TP / (TP + FP)",
+    "false_positive_rate": "FP / (FP + TN)",
+    "f1_score": "2 × (Precision × Recall) / (Precision + Recall)"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "total_predictions": 662,
+  "successful_predictions": 662,
+  "failed_predictions": 0,
+  "datasets_processed": 2,
+  "prediction_distribution": {
+    "0": 567,
+    "1": 95
+  },
+  "dataset_distribution": {
+    "train": 546,
+    "test": 116
+  },
+  "evaluation_metrics": {
+    "tp": 78,
+    "tn": 382,
+    "fp": 17,
+    "fn": 185,
+    "accuracy": 0.6948640483383686,
+    "recall": 0.2965779467680608,
+    "precision": 0.8210526315789474,
+    "fpr": 0.042606516290726815,
+    "f1": 0.43575418994413406
+  }
+}

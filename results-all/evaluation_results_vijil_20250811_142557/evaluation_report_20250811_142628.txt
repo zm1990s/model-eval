@@ -1,0 +1,28 @@
+模型评估报告
+==================================================
+评估时间: 2025-08-11T14:26:28.990362
+数据来源: evaluation_results_vijil_20250811_142557/eval_summary_20250811_142628.csv
+有效样本数: 662
+
+混淆矩阵:
+--------------------
+True Positive (TP):  78
+True Negative (TN):  382
+False Positive (FP): 17
+False Negative (FN): 185
+
+评估指标:
+--------------------
+准确度 (Accuracy):    0.6949
+召回率 (Recall):      0.2966
+精确度 (Precision):   0.8211
+误报率 (FPR):         0.0426
+F1分数 (F1):          0.4358
+
+指标说明:
+--------------------
+准确度 (Accuracy) = (TP + TN) / (TP + TN + FP + FN)
+召回率 (Recall) = TP / (TP + FN)
+精确度 (Precision) = TP / (TP + FP)
+误报率 (FPR) = FP / (FP + TN)
+F1分数 (F1) = 2 × (Precision × Recall) / (Precision + Recall)

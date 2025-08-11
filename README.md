@@ -127,6 +127,7 @@ Based on evaluation results from August 4, 2025, here's the performance comparis
 | **ProtectAI v2** | 76.13% | 41.44% | 96.46% | 57.98% | 1.00% |
 | **PreambleAI** | 74.62% | 47.91% | 80.25% | 60.00% | 7.77% |
 | **Llama Prompt Guard 2** | 69.18% | 22.81% | 98.36% | 37.04% | 0.25% |
+| **Vijil mBERT** | 69.49% | 29.66% | 82.11% | 43.58% | 4.26% |
 
 ### Detailed Confusion Matrix Comparison
 
@@ -138,6 +139,7 @@ Based on evaluation results from August 4, 2025, here's the performance comparis
 | ProtectAI v2 | 109 | 395 | 4 | 154 | 662 |
 | PreambleAI | 126 | 368 | 31 | 137 | 662 |
 | Llama Prompt Guard 2 | 60 | 398 | 1 | 203 | 662 |
+| Vijil mBERT | 78 | 382 | 17 | 185 | 662 |
 
 ### Evaluation Metrics
 

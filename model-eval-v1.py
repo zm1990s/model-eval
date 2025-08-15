@@ -26,7 +26,7 @@
 # conda create -n model-eval python=3.12
 # conda activate model-eval
 # python -m pip install torch pandas transformers tqdm pyarrow -i https://pypi.tuna.tsinghua.edu.cn/simple 
-# huggingface-cli download PreambleAI/prompt-injection-defense --local-dir ./preambleai/
+# huggingface-cli download PreambleAI/prompt-injection-defense --local-dir ./models/preambleai/
 
 import pandas as pd
 import json

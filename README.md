@@ -119,21 +119,23 @@ The script creates a timestamped directory with the model name: `evaluation_resu
 
 Based on evaluation results from August 4, 2025, here's the performance comparison of various models on the same test dataset:
 
-| Model Name | Accuracy | Recall | Precision | F1 Score | FPR |
-|------------|----------|--------|-----------|----------|-----|
-| **SavantAI Defender Large** | **99.40%** | **98.48%** | **100.00%** | **99.23%** | **0.00%** |
-| **Qualifire** | **96.83%** | **92.78%** | **99.19%** | **95.87%** | **0.50%** |
-| **ProtectAI v1** | 77.49% | 45.25% | 95.97% | 61.50% | 1.25% |
-| **ProtectAI v2** | 76.13% | 41.44% | 96.46% | 57.98% | 1.00% |
-| **PreambleAI** | 74.62% | 47.91% | 80.25% | 60.00% | 7.77% |
-| **Llama Prompt Guard 2** | 69.18% | 22.81% | 98.36% | 37.04% | 0.25% |
-| **Vijil mBERT** | 69.49% | 29.66% | 82.11% | 43.58% | 4.26% |
+| Model Name | Accuracy | Recall | Precision | FPR | F1 Score |
+|------------|----------|--------|-----------|-----|----------|
+| **SavantAI Defender Large** | **99.40%** | **98.48%** | **100.00%** | **0.00%** | **99.23%** |
+| **Deepset DeBERTa** | **99.70%** | **99.62%** | **99.62%** | **0.25%** | **99.62%** |
+| **Qualifire** | **96.83%** | **92.78%** | **99.19%** | **0.50%** | **95.87%** |
+| **ProtectAI v1** | 77.49% | 45.25% | 95.97% | 1.25% | 61.50% |
+| **ProtectAI v2** | 76.13% | 41.44% | 96.46% | 1.00% | 57.98% |
+| **PreambleAI** | 74.62% | 47.91% | 80.25% | 7.77% | 60.00% |
+| **Llama Prompt Guard 2** | 69.18% | 22.81% | 98.36% | 0.25% | 37.04% |
+| **Vijil mBERT** | 69.49% | 29.66% | 82.11% | 4.26% | 43.58% |
 
 ### Detailed Confusion Matrix Comparison
 
 | Model Name | TP | TN | FP | FN | Total Samples |
 |------------|----|----|----|----|---------------|
 | SavantAI Defender Large | 259 | 399 | 0 | 4 | 662 |
+| Deepset DeBERTa | 262 | 398 | 1 | 1 | 662 |
 | Qualifire | 244 | 397 | 2 | 19 | 662 |
 | ProtectAI v1 | 119 | 394 | 5 | 144 | 662 |
 | ProtectAI v2 | 109 | 395 | 4 | 154 | 662 |

@@ -63,6 +63,9 @@ model_path = "./models/qualifire/"
 
 # SavantAI 模型
 model_path = "./models/testsavantai-prompt-injection-defender-large-v0/"
+
+# Deepset 模型
+model_path = "./models/deepset-deberta/"
 ```
 
 ### 数据集配置
@@ -83,6 +86,7 @@ python model-eval-v1.py
 - **PreambleAI**: PreambleAI 的提示注入检测模型
 - **Qualifire**: Qualifire 的提示注入检测模型
 - **SavantAI**: SavantAI 的大型提示注入防护模型
+- **Deepset DeBERTa**: Deepset 基于 DeBERTa 的提示注入检测模型
 
 ## 数据集格式
 
@@ -117,23 +121,25 @@ python model-eval-v1.py
 
 ## 模型评估结果对比
 
-基于 2025年8月4日 的评估结果，以下是各模型在同一测试数据集上的性能对比：
+基于 2025年8月4日和8月15日 的评估结果，以下是各模型在同一测试数据集上的性能对比：
 
-| 模型名称 | 准确度 (Accuracy) | 召回率 (Recall) | 精确度 (Precision) | F1分数 | 误报率 (FPR) |
-|---------|------------------|----------------|-------------------|--------|--------------|
-| **SavantAI Defender Large** | **99.40%** | **98.48%** | **100.00%** | **99.23%** | **0.00%** |
-| **Qualifire** | **96.83%** | **92.78%** | **99.19%** | **95.87%** | **0.50%** |
-| **ProtectAI v1** | 77.49% | 45.25% | 95.97% | 61.50% | 1.25% |
-| **ProtectAI v2** | 76.13% | 41.44% | 96.46% | 57.98% | 1.00% |
-| **PreambleAI** | 74.62% | 47.91% | 80.25% | 60.00% | 7.77% |
-| **Llama Prompt Guard 2** | 69.18% | 22.81% | 98.36% | 37.04% | 0.25% |
-| **Vijil mBERT** | 69.49% | 29.66% | 82.11% | 43.58% | 4.26% |
+| 模型名称 | 准确度 (Accuracy) | 召回率 (Recall) | 精确度 (Precision) | 误报率 (FPR) | F1分数 |
+|---------|------------------|----------------|-------------------|--------------|--------|
+| **SavantAI Defender Large** | **99.40%** | **98.48%** | **100.00%** | **0.00%** | **99.23%** |
+| **Deepset DeBERTa** | **99.70%** | **99.62%** | **99.62%** | **0.25%** | **99.62%** |
+| **Qualifire** | **96.83%** | **92.78%** | **99.19%** | **0.50%** | **95.87%** |
+| **ProtectAI v1** | 77.49% | 45.25% | 95.97% | 1.25% | 61.50% |
+| **ProtectAI v2** | 76.13% | 41.44% | 96.46% | 1.00% | 57.98% |
+| **PreambleAI** | 74.62% | 47.91% | 80.25% | 7.77% | 60.00% |
+| **Llama Prompt Guard 2** | 69.18% | 22.81% | 98.36% | 0.25% | 37.04% |
+| **Vijil mBERT** | 69.49% | 29.66% | 82.11% | 4.26% | 43.58% |
 
 ### 详细混淆矩阵对比
 
 | 模型名称 | TP | TN | FP | FN | 样本总数 |
 |---------|----|----|----|----|----------|
 | SavantAI Defender Large | 259 | 399 | 0 | 4 | 662 |
+| Deepset DeBERTa | 262 | 398 | 1 | 1 | 662 |
 | Qualifire | 244 | 397 | 2 | 19 | 662 |
 | ProtectAI v1 | 119 | 394 | 5 | 144 | 662 |
 | ProtectAI v2 | 109 | 395 | 4 | 154 | 662 |
@@ -191,6 +197,7 @@ evaluation_results_Llama-Prompt-Guard-2-86M_20250804_143022/
 - [PreambleAI](https://huggingface.co/preambleai/preamble-prompt-injection-model)
 - [Qualifire](https://huggingface.co/qualifire/prompt-injection-detector)
 - [SavantAI Defender](https://huggingface.co/testsavantai/prompt-injection-defender-large-v0)
+- [Deepset DeBERTa](https://huggingface.co/deepset/deberta-v3-base-injection)
 
 
 ## 许可证

@@ -1,0 +1,20 @@
+{
+  "evaluation_time": "2025-08-18T21:10:03.781386",
+  "model_path": "./models/testsavantai-prompt-injection-defender-large-v0/",
+  "model_name": "testsavantai-prompt-injection-defender-large-v0",
+  "dataset_path": "datasets/merged_datasets_short_2000.csv",
+  "total_samples": 2000,
+  "confusion_matrix": {
+    "true_positive": 807,
+    "true_negative": 801,
+    "false_positive": 205,
+    "false_negative": 187
+  },
+  "metrics": {
+    "accuracy": 0.804,
+    "recall": 0.8118712273641852,
+    "precision": 0.7974308300395256,
+    "false_positive_rate": 0.20377733598409542,
+    "f1_score": 0.8045862412761716
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "evaluation_time": "2025-08-18T13:59:24.670306",
+  "model_path": "./models/Llama-Prompt-Guard-2-86M",
+  "model_name": "Llama-Prompt-Guard-2-86M",
+  "dataset_path": "datasets/merged_datasets.csv",
+  "total_samples": 20265,
+  "confusion_matrix": {
+    "true_positive": 4564,
+    "true_negative": 11457,
+    "false_positive": 587,
+    "false_negative": 3657
+  },
+  "metrics": {
+    "accuracy": 0.790574882802862,
+    "recall": 0.5551636054008028,
+    "precision": 0.8860415453310037,
+    "false_positive_rate": 0.048737960810362004,
+    "f1_score": 0.682620400837571
+  }
+}

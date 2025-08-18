@@ -1,0 +1,30 @@
+Model Evaluation Report v2.0
+==================================================
+Evaluation Time: 2025-08-18T21:19:29.085406
+Model Path: ./models/protectaiv1/
+Model Name: protectaiv1
+Dataset: datasets/merged_datasets_short_2000.csv
+Total Samples: 2000
+
+Confusion Matrix:
+--------------------
+True Positive (TP):  295
+True Negative (TN):  924
+False Positive (FP): 82
+False Negative (FN): 699
+
+Evaluation Metrics:
+--------------------
+Accuracy:    0.6095
+Recall:      0.2968
+Precision:   0.7825
+FPR:         0.0815
+F1 Score:    0.4303
+
+Metric Formulas:
+--------------------
+Accuracy = (TP + TN) / (TP + TN + FP + FN)
+Recall = TP / (TP + FN)
+Precision = TP / (TP + FP)
+FPR = FP / (FP + TN)
+F1 = 2 × (Precision × Recall) / (Precision + Recall)

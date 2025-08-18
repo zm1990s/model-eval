@@ -1,0 +1,30 @@
+Model Evaluation Report v2.0
+==================================================
+Evaluation Time: 2025-08-18T22:29:26.097234
+Model Path: ./models/preambleai/
+Model Name: preambleai
+Dataset: datasets/merged_datasets_short_3000.csv
+Total Samples: 3000
+
+Confusion Matrix:
+--------------------
+True Positive (TP):  1014
+True Negative (TN):  1449
+False Positive (FP): 120
+False Negative (FN): 417
+
+Evaluation Metrics:
+--------------------
+Accuracy:    0.8210
+Recall:      0.7086
+Precision:   0.8942
+FPR:         0.0765
+F1 Score:    0.7906
+
+Metric Formulas:
+--------------------
+Accuracy = (TP + TN) / (TP + TN + FP + FN)
+Recall = TP / (TP + FN)
+Precision = TP / (TP + FP)
+FPR = FP / (FP + TN)
+F1 = 2 × (Precision × Recall) / (Precision + Recall)

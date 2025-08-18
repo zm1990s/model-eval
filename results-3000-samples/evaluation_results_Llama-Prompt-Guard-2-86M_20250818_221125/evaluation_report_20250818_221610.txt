@@ -1,0 +1,30 @@
+Model Evaluation Report v2.0
+==================================================
+Evaluation Time: 2025-08-18T22:16:10.108095
+Model Path: ./models/Llama-Prompt-Guard-2-86M/
+Model Name: Llama-Prompt-Guard-2-86M
+Dataset: datasets/merged_datasets_short_3000.csv
+Total Samples: 3000
+
+Confusion Matrix:
+--------------------
+True Positive (TP):  676
+True Negative (TN):  1439
+False Positive (FP): 130
+False Negative (FN): 755
+
+Evaluation Metrics:
+--------------------
+Accuracy:    0.7050
+Recall:      0.4724
+Precision:   0.8387
+FPR:         0.0829
+F1 Score:    0.6044
+
+Metric Formulas:
+--------------------
+Accuracy = (TP + TN) / (TP + TN + FP + FN)
+Recall = TP / (TP + FN)
+Precision = TP / (TP + FP)
+FPR = FP / (FP + TN)
+F1 = 2 × (Precision × Recall) / (Precision + Recall)

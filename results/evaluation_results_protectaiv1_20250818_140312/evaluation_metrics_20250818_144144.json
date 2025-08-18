@@ -1,0 +1,20 @@
+{
+  "evaluation_time": "2025-08-18T14:41:45.250006",
+  "model_path": "./models/protectaiv1",
+  "model_name": "protectaiv1",
+  "dataset_path": "datasets/merged_datasets.csv",
+  "total_samples": 20265,
+  "confusion_matrix": {
+    "true_positive": 2485,
+    "true_negative": 11855,
+    "false_positive": 189,
+    "false_negative": 5736
+  },
+  "metrics": {
+    "accuracy": 0.7076239822353811,
+    "recall": 0.30227466244982365,
+    "precision": 0.9293193717277487,
+    "false_positive_rate": 0.015692460976419794,
+    "f1_score": 0.4561725562184489
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "evaluation_time": "2025-08-18T22:05:10.496847",
+  "model_path": "./models/deepset-deberta/",
+  "model_name": "deepset-deberta",
+  "dataset_path": "datasets/merged_datasets_short_3000.csv",
+  "total_samples": 3000,
+  "confusion_matrix": {
+    "true_positive": 1360,
+    "true_negative": 554,
+    "false_positive": 1015,
+    "false_negative": 71
+  },
+  "metrics": {
+    "accuracy": 0.638,
+    "recall": 0.9503843466107617,
+    "precision": 0.5726315789473684,
+    "false_positive_rate": 0.6469088591459529,
+    "f1_score": 0.7146610614818706
+  }
+}

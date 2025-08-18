@@ -1,0 +1,20 @@
+{
+  "evaluation_time": "2025-08-18T21:53:32.444065",
+  "model_path": "./models/preambleai/",
+  "model_name": "preambleai",
+  "dataset_path": "datasets/merged_datasets_short_1000.csv",
+  "total_samples": 1000,
+  "confusion_matrix": {
+    "true_positive": 321,
+    "true_negative": 427,
+    "false_positive": 88,
+    "false_negative": 164
+  },
+  "metrics": {
+    "accuracy": 0.748,
+    "recall": 0.6618556701030928,
+    "precision": 0.784841075794621,
+    "false_positive_rate": 0.170873786407767,
+    "f1_score": 0.7181208053691276
+  }
+}

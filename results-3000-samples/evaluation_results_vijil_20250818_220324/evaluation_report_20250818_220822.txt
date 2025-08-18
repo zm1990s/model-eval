@@ -1,0 +1,21 @@
+Model Evaluation Report
+==================================================
+Evaluation time: 2025-08-18T22:08:23.049031
+Model path: ./models/vijil-mbert-prompt-injection/
+Dataset path: datasets/merged_datasets_short_3000.csv
+Total samples: 3000
+
+Confusion Matrix:
+--------------------
+True Positive (TP):  1014
+True Negative (TN):  1434
+False Positive (FP): 135
+False Negative (FN): 417
+
+Evaluation Metrics:
+--------------------
+Accuracy:    0.8160
+Recall:      0.7086
+Precision:   0.8825
+FPR:         0.0860
+F1:          0.7860

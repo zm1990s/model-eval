@@ -1,0 +1,30 @@
+Model Evaluation Report v2.0
+==================================================
+Evaluation Time: 2025-08-18T21:40:11.695747
+Model Path: ./models/deepset-deberta/
+Model Name: deepset-deberta
+Dataset: datasets/merged_datasets_short_1000.csv
+Total Samples: 1000
+
+Confusion Matrix:
+--------------------
+True Positive (TP):  452
+True Negative (TN):  191
+False Positive (FP): 324
+False Negative (FN): 33
+
+Evaluation Metrics:
+--------------------
+Accuracy:    0.6430
+Recall:      0.9320
+Precision:   0.5825
+FPR:         0.6291
+F1 Score:    0.7169
+
+Metric Formulas:
+--------------------
+Accuracy = (TP + TN) / (TP + TN + FP + FN)
+Recall = TP / (TP + FN)
+Precision = TP / (TP + FP)
+FPR = FP / (FP + TN)
+F1 = 2 × (Precision × Recall) / (Precision + Recall)

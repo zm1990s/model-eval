@@ -191,7 +191,7 @@ The API is compatible with [Garak](https://github.com/leondz/garak), an LLM vuln
 
 #### pre-requisites
 
-directly with Python:
+Load the model with Python:
 ```bash
 python model-to-openai-api/openai_compatible_api.py --model ./models/deepset-deberta/ --port 8000 --host 127.0.0.1
 ```

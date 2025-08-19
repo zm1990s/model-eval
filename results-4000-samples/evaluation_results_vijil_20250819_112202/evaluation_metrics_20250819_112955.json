@@ -1,0 +1,19 @@
+{
+  "evaluation_time": "2025-08-19T11:29:55.358187",
+  "model_path": "./models/vijil-mbert-prompt-injection/",
+  "dataset_path": "datasets/merged_datasets_short_4000.csv",
+  "total_samples": 4000,
+  "confusion_matrix": {
+    "true_positive": 1391,
+    "true_negative": 1966,
+    "false_positive": 163,
+    "false_negative": 480
+  },
+  "metrics": {
+    "accuracy": 0.83925,
+    "recall": 0.743452699091395,
+    "precision": 0.8951093951093951,
+    "false_positive_rate": 0.07656176608736497,
+    "f1_score": 0.8122627737226278
+  }
+}

@@ -1,0 +1,30 @@
+Model Evaluation Report v2.0
+==================================================
+Evaluation Time: 2025-08-19T11:38:59.862281
+Model Path: ./models/testsavantai-prompt-injection-defender-large-v0/
+Model Name: testsavantai-prompt-injection-defender-large-v0
+Dataset: datasets/merged_datasets_short_4000.csv
+Total Samples: 4000
+
+Confusion Matrix:
+--------------------
+True Positive (TP):  1615
+True Negative (TN):  1755
+False Positive (FP): 374
+False Negative (FN): 256
+
+Evaluation Metrics:
+--------------------
+Accuracy:    0.8425
+Recall:      0.8632
+Precision:   0.8120
+FPR:         0.1757
+F1 Score:    0.8368
+
+Metric Formulas:
+--------------------
+Accuracy = (TP + TN) / (TP + TN + FP + FN)
+Recall = TP / (TP + FN)
+Precision = TP / (TP + FP)
+FPR = FP / (FP + TN)
+F1 = 2 × (Precision × Recall) / (Precision + Recall)

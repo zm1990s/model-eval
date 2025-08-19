@@ -1,0 +1,30 @@
+Model Evaluation Report v2.0
+==================================================
+Evaluation Time: 2025-08-19T12:25:30.043733
+Model Path: ./models/qualifire/
+Model Name: qualifire
+Dataset: datasets/merged_datasets_short_4000.csv
+Total Samples: 4000
+
+Confusion Matrix:
+--------------------
+True Positive (TP):  1594
+True Negative (TN):  2007
+False Positive (FP): 122
+False Negative (FN): 277
+
+Evaluation Metrics:
+--------------------
+Accuracy:    0.9002
+Recall:      0.8520
+Precision:   0.9289
+FPR:         0.0573
+F1 Score:    0.8888
+
+Metric Formulas:
+--------------------
+Accuracy = (TP + TN) / (TP + TN + FP + FN)
+Recall = TP / (TP + FN)
+Precision = TP / (TP + FP)
+FPR = FP / (FP + TN)
+F1 = 2 × (Precision × Recall) / (Precision + Recall)
